@@ -34,6 +34,8 @@ let price3 = 10000 + (Math.round(100 * y*y) -100)
 
 let pricearm1 = 500 + (Math.round(5.72 * multclick*multclick) -6)
 
+let priceheimer = 100000
+
 let qnthex1 = 1 - 1
 
 let qnthex2 = 1 - 1
@@ -62,6 +64,7 @@ function cookieClicked(){
 
 function displayCookiesquantidade(){
 displayCookies.innerHTML = (cookies + a)
+
 }
 
 
@@ -163,4 +166,53 @@ setInterval(eps, 1000)
 let qnteps = document.getElementById("quantoganha")
 qnteps.innerHTML = (multiplier + multiplier2 + multiplier3 + " EPS")
 
-////////////////////////////////////////////////////////////////////////////////////////////////
+/////////////////////////Upgrade Campeões//////////////////////////////////////////////
+
+let heimerdinger = document.getElementById("upgrade1")
+heimerdinger.innerHTML = ("Heimerdinguer:" + "\n" + priceheimer + " EA")
+
+heimerdinger.addEventListener("click", upgradeheimer)
+
+function upgradeheimer(){
+    if(cookies >= priceheimer){
+        multiplier++
+        qnthex1++
+        qnteps.innerHTML = (multiplier + multiplier2 + multiplier3 + " EPS")
+        hextechM.innerText = ("Hextech Machine: " + qnthex1 + "\n" + price + " EA")
+        multiplier2+= 30
+        qnthex2++
+        qnteps.innerHTML = (multiplier + multiplier2 + multiplier3 + " EPS")
+        hextechM2.innerText = ("Hextech Machine II: " + qnthex2 + "\n" + price2 + " EA")
+        multiplier3+= 60
+        qnthex3++
+        qnteps.innerHTML = (multiplier + multiplier2 + multiplier3 + " EPS")
+        hextechM3.innerText = ("Hextech Machine III: " + qnthex3 + "\n" + price3 + " EA")
+        
+        setInterval(() =>
+             {multiplier++
+              qnthex1++
+              qnteps.innerHTML = (multiplier + multiplier2 + multiplier3 + " EPS")
+              hextechM.innerText = ("Hextech Machine: " + qnthex1 + "\n" + price + " EA")}, 20000)  
+        
+        setInterval(() => {
+            multiplier2+= 30
+            qnthex2++
+            qnteps.innerHTML = (multiplier + multiplier2 + multiplier3 + " EPS")
+            hextechM2.innerText = ("Hextech Machine II: " + qnthex2 + "\n" + price2 + " EA")
+        }, 60000);
+        setInterval(() => {
+            multiplier3+= 60
+            qnthex3++
+            qnteps.innerHTML = (multiplier + multiplier2 + multiplier3 + " EPS")
+            hextechM3.innerText = ("Hextech Machine III: " + qnthex3 + "\n" + price3 + " EA")
+        }, 120000);
+
+        
+        qnteps.innerHTML = (multiplier + multiplier2 + multiplier3 + " EPS")
+        cookies = cookies - priceheimer
+        displayCookiesquantidade()
+        hextechM.innerText = ("Hextech Machine: " + qnthex1 + "\n" + price + " EA")
+        heimerdinger.innerHTML = ("Heimerdinger : Adquirido")
+        heimerdinger.removeEventListener("click",upgradeheimer)
+    }
+}
