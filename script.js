@@ -26,13 +26,13 @@ let multclick = 1
 
 let click = 1
 
-let price = 50 + (Math.round(1 * multiplier*multiplier -1))
+let price = 50 + (Math.round(1.5 * multiplier*multiplier)-2)
 
-let price2 = 5000 + (Math.round(1.2 * x*x) -1)
+let price2 = 5000 + (Math.round(50 * x*x) -50)
 
-let price3 = 10000 + (Math.round(1.5 * y*y) -2)
+let price3 = 10000 + (Math.round(100 * y*y) -100)
 
-let pricearm1 = 500 + (Math.round(2 * multclick*multclick) -2)
+let pricearm1 = 500 + (Math.round(5.72 * multclick*multclick) -6)
 
 let qnthex1 = 1 - 1
 
@@ -88,10 +88,10 @@ function hextechMachine(){
     if (cookies >= price){
         multiplier++
         qnthex1++
-        qnteps.innerHTML = (multiplier + multiplier2 + " EPS")
+        qnteps.innerHTML = (multiplier + multiplier2 + multiplier3 + " EPS")
         cookies = cookies - price
         displayCookiesquantidade()
-        price = 50 + (Math.round(1 * multiplier*multiplier -1))
+        price = 50 + (Math.round(1.5 * multiplier*multiplier))
         hextechM.innerText = ("Hextech Machine: " + qnthex1 + "\n" + price + " EA")}
     }
 
@@ -99,25 +99,27 @@ function hextechMachine(){
 
 function hextechMachine2(){
    if(cookies >= price2){
-    multiplier2+= 40
+    multiplier2+= 30
+    qnthex2++
     x++
-    qnteps.innerHTML = (multiplier + multiplier2 + " EPS")
+    qnteps.innerHTML = (multiplier + multiplier2 + multiplier3 + " EPS")
     cookies = cookies - price2
     displayCookiesquantidade()
-    price2 = 5000 + (Math.round(1.2 * x*x) -1)
-    hextechM2.innerText = ("Hextech Machine II " + qnthex2 + "\n" + price2 + " EA")
+    price2 = 5000 + (Math.round(53.50 * x*x))
+    hextechM2.innerText = ("Hextech Machine II: " + qnthex2 + "\n" + price2 + " EA")
 }
 }
 
 function hextechMachine3(){
     if(cookies >= price3){
-     multiplier3+= 80
+     multiplier3+= 60
+     qnthex3++
      y++
      qnteps.innerHTML = (multiplier + multiplier2 + multiplier3 + " EPS")
      cookies = cookies - price3
      displayCookiesquantidade()
-     price3 = 10000 + (Math.round(1.5 * y*y) -1)
-     hextechM3.innerText = ("Hextech Machine III " + qnthex3 + "\n" + price3 + " EA")
+     price3 = 10000 + (Math.round(112.5 * y*y))
+     hextechM3.innerText = ("Hextech Machine III: " + qnthex3 + "\n" + price3 + " EA")
  }
 
  
@@ -138,7 +140,7 @@ braco1.innerText = ("Braço Robótico: " + qntarm1 + "\n" + pricearm1 + " EA")
             qnteps.innerHTML = (multiplier + multiplier2 + multiplier3 + " EPS")
             cookies = cookies - pricearm1
             displayCookiesquantidade()
-            pricearm1 = 500 + (Math.round(2 * multclick*multclick) )
+            pricearm1 = 500 + (Math.round(5.72 * multclick*multclick) )
             console.log("abacate")
             braco1.innerText = ("Braço Robótico: " + qntarm1 + "\n" + pricearm1 + " EA")
         } 

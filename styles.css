@@ -9,6 +9,7 @@ body{
     background-attachment: fixed;
     background-position: center center;
     background-size: cover;
+    margin: 0px;
 }
 
 .bigCookie{
@@ -30,7 +31,7 @@ left: 60px;
     flex-direction: column;
     justify-content: space-around;
     align-items: center;
-    left: 680px;
+    left: 705px;
     top: 10px;
     margin-bottom: 15px;
     width: 180px;
