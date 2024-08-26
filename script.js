@@ -36,6 +36,8 @@ let pricearm1 = 500 + (Math.round(5.72 * multclick*multclick) -6)
 
 let priceheimer = 100000
 
+let priceviktor = 20000
+
 let qnthex1 = 1 - 1
 
 let qnthex2 = 1 - 1
@@ -215,4 +217,32 @@ function upgradeheimer(){
         heimerdinger.innerHTML = ("Heimerdinger : Adquirido")
         heimerdinger.removeEventListener("click",upgradeheimer)
     }
+}
+
+let viktor = document.getElementById("upgrade2")
+viktor.innerHTML = ("Viktor :" + "\n" + priceviktor + " EA")
+
+viktor.addEventListener("click", upgradeviktor)
+
+function upgradeviktor(){
+    if(cookies >= priceviktor){
+        cookies = cookies - priceviktor
+        click++
+        multclick++
+        qntarm1++
+        qnteps.innerHTML = (multiplier + multiplier2 + multiplier3 + " EPS")
+        braco1.innerText = ("Braço Robótico: " + qntarm1 + "\n" + pricearm1 + " EA")
+        displayCookiesquantidade()
+        setInterval(() => {
+            click++
+            multclick++
+            qntarm1++
+            braco1.innerText = ("Braço Robótico: " + qntarm1 + "\n" + pricearm1 + " EA")
+        }, 30000);
+        viktor.innerHTML = ("Viktor : Adquirido")
+    }
+    qnteps.innerHTML = (multiplier + multiplier2 + multiplier3 + " EPS")
+    braco1.innerText = ("Braço Robótico: " + qntarm1 + "\n" + pricearm1 + " EA")
+    viktor.removeEventListener("click", upgradeviktor)
+
 }
