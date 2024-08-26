@@ -1,44 +1,81 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
 
 body{
     display: flex;
+    justify-content: space-between;
     height: 100vh;
     width: 100vw;
-    justify-content: center;
     background: url(backgroundlol.jpg);
     background-repeat: no-repeat;
     background-attachment: fixed;
     background-position: center center;
     background-size: cover;
     margin: 0px;
+    padding: 0;
+    box-sizing: border-box;
+
 }
 
 .bigCookie{
+display: flex;
+justify-content: center;
 width: 250px;
 height: 250px;
+margin-top: 20px;
 cursor: pointer;
 background: url(ea.jpg);
 background-size: cover;
-position: relative;
-left: 60px;
+left: 750px;
 top: 20px;
 
 
 }
 
 
+
+
+
+
+
 .upgrades > * button{
     display: flex;
-    position: relative;
     flex-direction: column;
     justify-content: space-around;
     align-items: center;
-    left: 705px;
-    top: 10px;
     margin-bottom: 15px;
-    width: 180px;
-    height: 100px;
-    font-size: medium;
+    margin-top: 15px;
+    width: 10vw;
+    height: 10vh;
+    font-size: 1.6vh;
     
+    
+}
+
+.upgradestrue{
+    display: flex;
+    justify-content: center;
+
+}
+
+.upgradetrue1{
+    display: flex;
+    justify-content: center;
+    height: 10vh;
+    width: 10vw;
+    margin-top: 25px;
+    align-items: center;
+    background: url(heimerdinger.png);
+    background-size: cover;
+    color: white;
+    text-shadow: 2px 2px 2px black;
+    font-size: 2vh;
+    
+
 }
 
 
@@ -49,15 +86,18 @@ top: 20px;
     display: flex;
     justify-content: center;
     align-items: center;
-    position: absolute;
-    top: 278px;
-    right: 850px;
+    top: 305px;
+    right: 0px;
+    left: 0px;
+    margin: 0 auto;
     font-size: xx-large;
     text-shadow: 2px 2px 2px cyan;
     
 }
 .bazinganha{
-    position: absolute;
+    display: flex;
+    justify-content: center;
+    align-items: center;
     width: 150px;
     top: 30px;
     right: 600px;
@@ -66,39 +106,47 @@ top: 20px;
 }
 
 
+
+.areadecompras .upgrades{
+    display: flex;  
+    flex-direction: column;
+  
+
+}
+
 .areadecompras{
+    display: flex;
+    justify-content: flex-end;
+    justify-content: space-around;
     background-color: blue;
     height: 100vh;
-    width: 210px;
-    position: absolute;
-    right: 0px;
+    width: 15vw;
+    
 }
 .areadecompras2{
     background-color: blue;
     height: 100vh;
-    width: 210px;
-    position: absolute;
-    left: 0px;
+    width: 15vw;
     text-shadow: 2px 1px 2px  white;
+    
 }
 .letraupgrades{
     display: flex;
     justify-content: center;
+    align-items: center;
+    font-size: 2.5vh;
 }
 
-.upgradetrue1{
-    display: flex;
-    justify-content: center;
-    left: 15px;
-    top: 80px;
-    position: absolute;
-    height: 100px;
-    width: 180px;
-    align-items: center;
-    background: url(heimerdinger.png);
-    background-size: cover;
-    color: white;
-    text-shadow: 2px 2px 2px black;
-    font-size: x-large
 
+
+
+
+
+.meio{
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+}
+.ea{
+    text-shadow: 1px 1px 1px cyan;
 }

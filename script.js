@@ -63,7 +63,7 @@ function cookieClicked(){
 ///////////////////Numero de Clicks////////////////////////////////////////
 
 function displayCookiesquantidade(){
-displayCookies.innerHTML = (cookies + a)
+displayCookies.innerHTML = (cookies)
 
 }
 
