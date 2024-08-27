@@ -24,17 +24,39 @@ body{
 .bigCookie{
 display: flex;
 justify-content: center;
-width: 250px;
-height: 250px;
+width: 240px;
+height: 240px;
 margin-top: 20px;
 cursor: pointer;
-background: url(ea.jpg);    
-background-size: cover;
+background: url(c7ccb287115887.5dae6de65e73e.jpg);    
+background-size: contain;
 left: 750px;
 top: 20px;
-border-radius: 50px;
+border-radius: 150px;
 
 
+}
+
+
+.botaoupgrade{
+    background: url(hextechmachine2.jpg);
+    background-size: cover;
+}
+
+.hex2{
+    background: url(hextechmachine2.jpg);
+    background-size: cover;
+}
+
+.hex3{
+    background: url(hextechmachine2.jpg);
+    background-size: cover;
+}
+
+
+.arm1{
+    background: url(hextecharm.jpg);
+    background-size: cover;
 }
 
 
@@ -54,6 +76,8 @@ border-radius: 50px;
     height: 10vh;
     font-size: 1.6vh;
     border-radius: 8px;
+    color: white;
+    text-shadow: 2px 2px 2px black;
     
 }
 
